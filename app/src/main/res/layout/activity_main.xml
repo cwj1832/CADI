@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.haams.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#468454ff"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="Week1_MyProfile"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#7046"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wonjun" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="205dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_weight="0.32">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="이름" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:text="나이" />
+
+                <TextView
+                    android:id="@+id/school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/age"
+                    android:text="학교" />
+
+                <TextView
+                    android:id="@+id/part"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/school"
+                    android:text="지원분야" />
+
+
+                <EditText
+                    android:id="@+id/edSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/school"
+                    android:layout_alignRight="@+id/edPart"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/school"
+                    android:hint="강원대학교 경영학과"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/edAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="25                "
+                    android:textSize="12sp"
+                    android:layout_alignBaseline="@+id/age"
+                    android:layout_alignBottom="@+id/age"
+                    android:layout_alignStart="@+id/edSchool" />
+
+                <EditText
+                    android:id="@+id/edName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="최원준            "
+                    android:textSize="12sp"
+                    android:layout_alignBaseline="@+id/name"
+                    android:layout_alignBottom="@+id/name"
+                    android:layout_toEndOf="@+id/name" />
+
+                <EditText
+                    android:id="@+id/edPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:hint="개발A             "
+                    android:textSize="12sp"
+                    android:layout_alignBaseline="@+id/part"
+                    android:layout_alignBottom="@+id/part"
+                    android:layout_toEndOf="@+id/part" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseball"
+                android:tint="#5effffff" />
+
+
+            <Button
+                android:id="@+id/btn_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="확인" />
+
+            <Button
+                android:id="@+id/btn_intro2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="확인" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
